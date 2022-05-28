@@ -9,7 +9,16 @@
     <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css">
     <link rel="icon" href="../static/images/icon.png" />
     <title>HBnB</title>
-  </head>
+		<script src="jquery-3.6.0.min.js">
+      var querystring = '?{{ cache_id }}';
+			$('link').each(function() {
+			  var href = $(this).attr('href');
+				if (href) {
+				  $(this).attr('href', href + querystring);
+				}
+			});
+		</script>
+ </head>
   <body>
     <header>
       <div class="logo"></div>
